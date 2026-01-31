@@ -1,6 +1,6 @@
 # QODL-E: THE DSA COMBAT TERMINAL
 
-### [LIVE DEPLOYMENT](#) 
+### [LIVE DEPLOYMENT](https://qotdle-varunsivanesan.vercel.app/) 
 
 QODL-E is a high-intensity coding challenge platform engineered for competitive programmers. It transforms daily DSA practice into an immersive terminal experience, where algorithms meet adrenaline through precision-crafted UI/UX and real-time performance tracking.
 
