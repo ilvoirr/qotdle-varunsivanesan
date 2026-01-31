@@ -237,7 +237,7 @@ export default function BullishDashboard() {
                 {/* AI Directive Box */}
                 <div className="bg-emerald-950/20 border border-emerald-500/20 rounded-xl p-4 relative">
                    <div className="absolute top-3 left-3">
-                      <IconBrain size={16} className="text-emerald-500" />
+                      
                    </div>
                    <p className="text-sm font-medium text-emerald-100/90 italic leading-relaxed pl-6 line-clamp-4">
                       "{data?.llm_advice || "Synthesizing strategic directives..."}"

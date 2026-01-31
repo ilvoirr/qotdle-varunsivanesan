@@ -105,7 +105,7 @@ export default function HomePage() {
         {/* --- BOTTOM CONTROLS --- */}
         <footer className="relative z-20 w-full p-6 flex items-end justify-between shrink-0">
           <div className="hidden md:block text-xs font-mono text-neutral-600 max-w-xs leading-relaxed">
-            CAUTION: UNAUTHORIZED ACCESS TO 110 MONITORING SYSTEMS IS STRICTLY PROHIBITED. ALL IP ADDRESSES LOGGED.
+            CAUTION: UNAUTHORIZED ACCESS TO 110 MONITORING SYSTEMS IS RESTRICTED <br/> USE DEMO CREDENTIALS TO LOGIN.
           </div>
 
           <SignedOut>
@@ -130,7 +130,7 @@ export default function HomePage() {
                           {/* Hover State (Demo Credentials) */}
                           <div className="absolute inset-0 flex items-center justify-between px-6 translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 bg-emerald-950/30 text-emerald-400 font-bold tracking-tight">
                               <span className="flex items-center gap-2"><IconTerminal2 size={14}/> DEMO ID: test</span>
-                              <span>DEMO PW: test123</span>
+                              <span>DEMO PW: fail.exe</span>
                           </div>
                       </button>
                   </SignInButton>
