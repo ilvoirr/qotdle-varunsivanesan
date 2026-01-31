@@ -130,6 +130,7 @@ Lottie animations created by talented designers:
 - [Graphic Room](https://iconscout.com/contributors/graphic-room)
 - [Danimotion](https://iconscout.com/contributors/danimotion)
 - [Graphichup](https://iconscout.com/contributors/graphichup)
+- [Nanoagency](https://iconscout.com/contributors/nanoagency)
 
 ---
 
