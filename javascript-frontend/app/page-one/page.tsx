@@ -31,6 +31,7 @@ export default function Page() {
   
   // --- Modal & Form States ---
   const [showAlertModal, setShowAlertModal] = useState(false);
+  const [showPortfolioModal, setShowPortfolioModal] = useState(false); // NEW SIMPLE STATE
   const [tgUsername, setTgUsername] = useState('');
   const [tgChatId, setTgChatId] = useState('');
   
@@ -77,7 +78,6 @@ export default function Page() {
       if (data.success) {
         setStatus('SUCCESS');
         setIsConnected(true);
-        // Load existing watchlist from server response
         if (data.user && data.user.watchlist) {
             setWatchlist(data.user.watchlist);
         }
@@ -112,8 +112,8 @@ export default function Page() {
         const data = await res.json();
         
         if (data.success) {
-            setWatchlist(data.watchlist); // Update local list
-            setNewKeyword(''); // Clear input
+            setWatchlist(data.watchlist); 
+            setNewKeyword(''); 
         }
     } catch (err) {
         console.error("Failed to add keyword", err);
@@ -294,10 +294,12 @@ export default function Page() {
                  </div>
              </div>
              <div className="flex flex-col gap-3 w-1/2">
-                <button className="w-full py-3 rounded-xl bg-white text-black font-bold text-xs hover:bg-purple-400 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                <button 
+                  onClick={() => setShowPortfolioModal(true)}
+                  className="w-full py-3 rounded-xl bg-white text-black font-bold text-xs hover:bg-purple-400 hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                >
                   <IconChartBar size={16} /> Portfolio
                 </button>
-                {/* Opens the Modal */}
                 <button 
                   onClick={() => setShowAlertModal(true)}
                   className="w-full py-3 rounded-xl bg-white/5 text-white font-bold text-xs hover:bg-white/10 border border-white/10 transition-all backdrop-blur-sm flex items-center justify-center gap-2"
@@ -378,7 +380,7 @@ export default function Page() {
                         'bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:opacity-90'}
                     `}
                   >
-                    {status === 'LOADING' ? 'CONNECTING...' : 'ACTIVATE_WEBHOOK'}
+                    {status === 'LOADING' ? 'CONNECTING...' : 'ACTIVATE WEBHOOK'}
                   </button>
                 </div>
               ) : (
@@ -424,6 +426,64 @@ export default function Page() {
                   </div>
                 </div>
               )}
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* --- NEW PORTFOLIO MODAL (ONLY ADDITION) --- */}
+      <AnimatePresence>
+        {showPortfolioModal && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowPortfolioModal(false)}
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            />
+            <motion.div 
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="relative w-full max-w-md bg-[#111] border border-white/10 rounded-[2.5rem] p-8 shadow-2xl overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
+              
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-xl font-black italic text-white tracking-tight">ACTIVE PORTFOLIO</h3>
+                <button onClick={() => setShowPortfolioModal(false)} className="p-2 hover:bg-white/5 rounded-full"><IconX size={20} className="text-white/40" /></button>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-white/5 p-4 rounded-2xl border border-white/5">
+                   <p className="text-[10px] font-mono text-blue-400 uppercase tracking-widest mb-1">Estimated Balance</p>
+                   <p className="text-3xl font-black text-white italic tracking-tighter">$142,690.42</p>
+                </div>
+
+                <div className="space-y-2">
+                   {[
+                     { name: "Bitcoin", sym: "BTC", val: "$98,420", change: "+2.4%" },
+                     { name: "Ethereum", sym: "ETH", val: "$12,150", change: "-0.8%" },
+                     { name: "Solana", sym: "SOL", val: "$32,120", change: "+12.1%" }
+                   ].map((asset, i) => (
+                     <div key={i} className="flex justify-between items-center p-3 bg-white/[0.02] border border-white/5 rounded-xl">
+                        <div>
+                          <p className="text-xs font-bold text-white">{asset.name}</p>
+                          <p className="text-[10px] font-mono text-white/30">{asset.sym}</p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-xs font-mono text-white">{asset.val}</p>
+                          <p className={`text-[10px] font-bold ${asset.change.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>{asset.change}</p>
+                        </div>
+                     </div>
+                   ))}
+                </div>
+
+                <button className="w-full py-4 bg-white text-black font-black text-xs tracking-widest rounded-2xl hover:bg-blue-400 transition-colors">
+                  VIEW DETAILED ANALYTICS
+                </button>
+              </div>
             </motion.div>
           </div>
         )}
