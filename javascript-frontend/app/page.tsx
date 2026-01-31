@@ -30,7 +30,7 @@ import {
   IconDeviceFloppy
 } from '@tabler/icons-react'
 
-// ✅ Your Ngrok Backend URL
+
 const BACKEND_URL = 'https://unnoting-tanya-boilingly.ngrok-free.dev'; 
 
 // ==========================================
@@ -383,7 +383,7 @@ function HardModeTerminal({ onClose }: { onClose: () => void }) {
 }
 
 // ==========================================
-// ✅ NEW: MOBILE CODING TERMINAL (TABBED)
+//  NEW: MOBILE CODING TERMINAL (TABBED)
 // ==========================================
 
 function MobileCodingTerminal({ onClose }: { onClose: () => void }) {
@@ -568,7 +568,7 @@ function MobileCodingTerminal({ onClose }: { onClose: () => void }) {
 }
 
 // ==========================================
-// ✅ NEW: MOBILE HARD MODE TERMINAL (TABBED)
+//  NEW: MOBILE HARD MODE TERMINAL (TABBED)
 // ==========================================
 
 function MobileHardModeTerminal({ onClose }: { onClose: () => void }) {
@@ -771,15 +771,15 @@ export default function Page() {
   const [showAlertModal, setShowAlertModal] = useState(false);
   const [showPortfolioModal, setShowPortfolioModal] = useState(false); 
   
-  // ✅ TERMINAL MODALS
+  //  TERMINAL MODALS
   const [showTerminal, setShowTerminal] = useState(false); // Easy Mode
   const [showHardTerminal, setShowHardTerminal] = useState(false); // Hard Mode
   
-  // ✅ NEW MODALS (Leaderboard & Prizes)
+  //  NEW MODALS (Leaderboard & Prizes)
   const [showLeaderboard, setShowLeaderboard] = useState(false);
   const [showPrizes, setShowPrizes] = useState(false);
 
-  // ✅ MASTER HENRY STATE
+  //  MASTER HENRY STATE
   const [isHenryActive, setIsHenryActive] = useState(false);
 
   const [tgUsername, setTgUsername] = useState('');
@@ -793,7 +793,7 @@ export default function Page() {
   const [status, setStatus] = useState('IDLE'); 
   const [errorMsg, setErrorMsg] = useState('');
 
-  // ✅ MOBILE DETECTION
+  //  MOBILE DETECTION
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -1231,7 +1231,7 @@ export default function Page() {
           whileTap={{ scale: 0.97 }}
           className="col-span-12 md:col-span-4 row-span-3 rounded-[2rem] bg-gradient-to-br from-indigo-950/40 via-[#111] to-blue-900/20 border border-white/5 p-6 flex flex-col relative group overflow-hidden transition-all duration-500 hover:border-blue-400/30 cursor-pointer"
         >
-          {/* ✅ CONDITIONALLY RENDER CONTENT BASED ON CLICK */}
+          {/*  CONDITIONALLY RENDER CONTENT BASED ON CLICK */}
           <AnimatePresence mode="wait">
             {isHenryActive ? (
                 // --- UNDER CONSTRUCTION STATE ---
