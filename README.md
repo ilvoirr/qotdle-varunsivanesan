@@ -8,7 +8,7 @@ QODL-E is a high-intensity coding challenge platform engineered for competitive 
 
 ## EXECUTIVE VISUAL OVERVIEW
 
-![Main Dashboard](./public/1.png)
+![Main Dashboard](./javascript-frontend/public/1.png)
 
 ---
 
@@ -17,7 +17,7 @@ QODL-E is a high-intensity coding challenge platform engineered for competitive 
 ### 1. DUAL-MODE DIFFICULTY SYSTEM
 The platform operates on a two-tier challenge architecture, allowing users to select their cognitive load based on current skill level and time constraints.
 
-![BLITZCRANK Easy Mode](./public/2.png)
+![BLITZCRANK Easy Mode](./javascript-frontend/public/2.png)
 
 ### 2. BLITZCRANK MODE: RAPID EXECUTION LAYER
 The entry-level combat zone designed for quick solves and daily streak maintenance. Features an emerald-coded visual language that signals low-barrier, high-reward problem sets.
@@ -30,7 +30,7 @@ The entry-level combat zone designed for quick solves and daily streak maintenan
 ### 3. HARD MODE: ELITE PROTOCOL
 A red-coded, high-stakes environment for advanced algorithmic combat. Designed for competitive programmers targeting FAANG-level complexity.
 
-![Hard Mode Terminal](./public/3.png)
+![Hard Mode Terminal](./javascript-frontend/public/3.png)
 
 * **ADVANCED PROBLEM SETS:** Graph theory, dynamic programming, and complex data structures
 * **ENHANCED TERMINAL AESTHETICS:** Red-on-black theme with aggressive visual cues
