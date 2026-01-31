@@ -10,14 +10,14 @@
 
 ### DESKTOP COMMAND CENTER
 The central hub designed for maximum information density without cognitive overload.
-![Main Dashboard](./javascript-frontend/public/1.png)
+![Main Dashboard](./public/1.png)
 
 ### RESPONSIVE & MOBILE ARCHITECTURE
 Designed for "coding on the commute," the interface fluidly adapts to mobile viewports without losing the terminal aesthetic.
 
 | Responsive Dashboard | Mobile Blitz (Easy) | Mobile Elite (Hard) |
 | :---: | :---: | :---: |
-| ![Responsive View](./javascript-frontend/public/6.png) | ![Mobile Easy](./javascript-frontend/public/5.png) | ![Mobile Hard](./javascript-frontend/public/4.png) |
+| ![Responsive View](./public/6.png) | ![Mobile Easy](./public/5.png) | ![Mobile Hard](./public/4.png) |
 
 ---
 
@@ -30,13 +30,13 @@ The platform operates on a two-tier challenge architecture, allowing users to se
 * **Goal:** Quick solves, streak maintenance, and warm-ups.
 * **Visual Language:** Emerald Green signals "Safe/Entry Level."
 * **Features:** Instant problem fetching, animated success states, and beginner-friendly problem sets.
-![BLITZCRANK Easy Mode](./javascript-frontend/public/2.png)
+![BLITZCRANK Easy Mode](./public/2.png)
 
 #### HARD MODE (ELITE PROTOCOL)
 * **Goal:** FAANG-level preparation and complex algorithmic combat.
 * **Visual Language:** Deep Red signals "High Stakes/Danger."
 * **Features:** Graph/DP problem sets, aggressive visual cues, and performance pressure.
-![Hard Mode Terminal](./javascript-frontend/public/3.png)
+![Hard Mode Terminal](./public/3.png)
 
 ### 2. GAMIFIED STATS & LEADERBOARD
 To drive the "Daily Habit Formation" requested in the brief:
